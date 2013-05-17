@@ -1,4 +1,7 @@
 #!/bin/bash
 
-cp -f Formula/haxe.rb /usr/local/Formula/
-cp -f Formula/neko.rb /usr/local/Formula/
+for i in `ls Formula/*.rb`; do
+  echo "  Copying ${i} into Formulas directory."
+  cp -f ${i} /usr/local/Library/Formula/
+done
+echo 'Done.'
