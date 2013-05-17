@@ -12,6 +12,7 @@ class Neko < Formula
 
   def install
     lib.install 'libneko.dylib'
+    bin.install %w(neko nekoc nekotools nekoml nekoml.std)
     prefix.install Dir['*']
   end
 
